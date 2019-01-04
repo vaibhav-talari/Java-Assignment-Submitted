@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="liberaryservice" class="com.examples.java.one.libraryService" autowire="constructor">
+	</bean>
+
+	<bean id="databaseconnect" class="com.example.java.DAO.DatabaseDAO" autowire="constructor"></bean>
+	
+	<bean id="datasourceconnect" class="com.example.java.connect.DataSourceConnect" scope="singleton">
+	<property name="jdbcdriver" value="com.mysql.jdbc.Driver"></property>
+	<property name="dburl" value="jdbc:mysql://localhost/javatestschema1"></property>
+	<property name="user" value="root"></property>
+	<property name="pass" value="pass@word1"></property>
+	</bean>
+	
+	
+</beans>
